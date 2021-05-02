@@ -1,0 +1,15 @@
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        c = int(a)+int(b)
+        d = ''
+        if c == 0:
+            return '0'
+        while c>0:
+            digit = c%10
+            if digit < 2:
+                d = str(digit)+d
+            else:
+                d = str(digit%2)+d
+                c += 10
+            c//=10
+        return d

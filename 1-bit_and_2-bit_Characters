@@ -1,0 +1,15 @@
+class Solution:
+    def isOneBitCharacter(self, bits: List[int]) -> bool:
+        while (len(bits)>2):
+            i = 0
+            if bits[i] == 1:
+                bits.remove(bits[i])
+                bits.remove(bits[i])
+            else:
+                bits.remove(bits[i])
+        if bits[0] == 0:
+            return True
+        else:
+            return False
+                
+        
